@@ -16,11 +16,15 @@
 
   const setActive = (index) => {
     sources.forEach((source, sourceIndex) => {
-      source.classList.toggle('is-active', sourceIndex === index);
+      const isActive = sourceIndex === index;
+      source.classList.toggle('is-active', isActive);
+      source.style.opacity = isActive ? '1' : '0.7';
     });
 
     contextItems.forEach((item, itemIndex) => {
-      item.classList.toggle('is-active', itemIndex === index);
+      const isActive = itemIndex === index;
+      item.classList.toggle('is-active', isActive);
+      item.style.opacity = isActive ? '1' : '0.56';
     });
 
     if (livePill) {
@@ -33,7 +37,11 @@
 
   setActive(0);
 
-  if (reduceMotion) return;
+  if (reduceMotion) {
+    sources.forEach((source) => { source.style.opacity = '1'; });
+    contextItems.forEach((item) => { item.style.opacity = '1'; });
+    return;
+  }
 
   let activeIndex = 0;
   window.setInterval(() => {
