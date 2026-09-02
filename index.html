@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Protocol Data conecta señales de tu negocio para convertir datos aislados en contexto accionable.">
+  <title>Protocol Data — Datos con contexto</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header" aria-label="Navegación principal">
+    <div class="site-header__inner">
+      <a class="brand" href="#inicio" aria-label="Protocol Data, inicio">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="7" cy="7" r="2.4"></circle>
+            <circle cx="17" cy="7" r="2.4"></circle>
+            <circle cx="12" cy="17" r="2.4"></circle>
+            <path d="M9.1 8.3 11 14.5M14.9 8.3 13 14.5M9.4 7h5.2"></path>
+          </svg>
+        </span>
+        <span class="brand__name">Protocol Data</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Secciones">
+        <a href="#capacidades">Capacidades</a>
+        <a href="#como-funciona">Cómo funciona</a>
+      </nav>
+
+      <a class="header-cta" href="#contacto">
+        Hablar con Protocol Data
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h14M14 7l5 5-5 5"></path>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="pink-hook">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 12h5l2.2-6 3.6 12L17 12h3"></path>
+          </svg>
+          DATOS QUE SE ENTIENDEN ENTRE SÍ
+        </p>
+
+        <h1 id="hero-title">Tus datos dejan de ser reportes. Empiezan a responder preguntas.</h1>
+
+        <p class="hero__lead">
+          Protocol Data organiza, cruza y contextualiza señales de tu sitio, campañas, clientes y operación para que puedas entender qué está pasando y actuar con criterio.
+        </p>
+
+        <div class="hero__actions" id="contacto">
+          <a class="cta cta--primary" href="mailto:contacto@protocoldata.com">
+            Hablar con Protocol Data
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14M14 7l5 5-5 5"></path>
+            </svg>
+          </a>
+          <a class="cta cta--soft" href="#capacidades">
+            Explorar capacidades
+          </a>
+        </div>
+
+        <div class="signal-row" aria-label="Áreas de datos que Protocol Data puede relacionar">
+          <span>Sitio + publicidad</span>
+          <span>Usuarios + contexto</span>
+          <span>Operación + rendimiento</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Ejemplo visual de datos conectados por Protocol Data">
+        <div class="hero-visual__topline">
+          <div>
+            <span class="eyebrow">EJEMPLO VISUAL</span>
+            <h2>Una persona. Varias señales. Un contexto.</h2>
+          </div>
+          <span class="live-pill"><i aria-hidden="true"></i> Conectado</span>
+        </div>
+
+        <div class="context-map" id="context-map">
+          <div class="source-stack" aria-label="Fuentes de datos del ejemplo">
+            <article class="source-card source-card--pink" data-source="meta">
+              <span class="source-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 16.5c2.3-6.4 4.3-9.6 6-9.6 2.6 0 4.4 10.2 6.8 10.2 1.3 0 2.4-1.7 3.2-4.7"></path><path d="M4 16.5c.8 1.4 1.8 2.1 3 2.1 3 0 5-10.7 7.8-10.7 1.6 0 3.3 2.8 5.2 8.5"></path></svg>
+              </span>
+              <span><strong>Publicidad</strong><small>UTM · campaña</small></span>
+            </article>
+
+            <article class="source-card source-card--blue" data-source="web">
+              <span class="source-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8"></circle><path d="M4.5 9h15M4.5 15h15M12 4c2 2.2 3 4.9 3 8s-1 5.8-3 8c-2-2.2-3-4.9-3-8s1-5.8 3-8Z"></path></svg>
+              </span>
+              <span><strong>Sitio web</strong><small>visitas · eventos</small></span>
+            </article>
+
+            <article class="source-card source-card--aqua" data-source="chat">
+              <span class="source-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 5.5h14v10H9l-4 3v-13Z"></path><path d="M8 9h8M8 12h5"></path></svg>
+              </span>
+              <span><strong>Cliente</strong><small>consulta · historial</small></span>
+            </article>
+
+            <article class="source-card source-card--yellow" data-source="order">
+              <span class="source-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 7h14l-1 12H6L5 7Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg>
+              </span>
+              <span><strong>Operación</strong><small>pedido · estado</small></span>
+            </article>
+          </div>
+
+          <div class="map-core" aria-hidden="true">
+            <span class="map-core__ring map-core__ring--one"></span>
+            <span class="map-core__ring map-core__ring--two"></span>
+            <span class="map-core__node">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="7" cy="7" r="2.4"></circle>
+                <circle cx="17" cy="7" r="2.4"></circle>
+                <circle cx="12" cy="17" r="2.4"></circle>
+                <path d="M9.1 8.3 11 14.5M14.9 8.3 13 14.5M9.4 7h5.2"></path>
+              </svg>
+            </span>
+            <span class="map-core__label">Protocol Data</span>
+          </div>
+
+          <div class="context-card">
+            <div class="context-card__header">
+              <span class="avatar" aria-hidden="true">LC</span>
+              <span><strong>Contexto conectado</strong><small>perfil de ejemplo</small></span>
+            </div>
+
+            <ul class="context-list">
+              <li><i class="dot dot--pink"></i><span>Llegó desde <strong>Meta / campaña</strong></span></li>
+              <li><i class="dot dot--blue"></i><span>Interactuó con el <strong>sitio</strong></span></li>
+              <li><i class="dot dot--aqua"></i><span>Dejó una <strong>consulta</strong></span></li>
+              <li><i class="dot dot--yellow"></i><span>Terminó en una <strong>compra</strong></span></li>
+            </ul>
+
+            <div class="context-result">
+              <span>LECTURA</span>
+              <strong>La campaña ya no termina en un clic.</strong>
+              <p>Podés seguir la relación entre adquisición, comportamiento y resultado.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="next-section" id="capacidades" aria-label="Próxima sección en construcción">
+      <p class="pink-hook">PRÓXIMO BLOQUE</p>
+      <h2>De mirar métricas a entender relaciones.</h2>
+      <p>Este será el punto de entrada a la banca de capacidades de Protocol Data. La construiremos con la documentación funcional real del producto.</p>
+    </section>
+
+    <span id="como-funciona" aria-hidden="true"></span>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
