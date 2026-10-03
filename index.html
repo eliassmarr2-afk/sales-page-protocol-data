@@ -26,98 +26,38 @@
         <a href="#acceso">Acceso anticipado</a>
       </nav>
 
-      <a class="topbar-cta" href="#contacto">Lista de espera</a>
+      <button class="topbar-cta" type="button" data-open-waitlist>Lista de espera</button>
     </div>
   </header>
 
   <main id="inicio">
     <section class="hero page-shell" aria-labelledby="hero-title">
-      <div class="hero-poster" aria-label="Vista conceptual del espacio de trabajo de Protocol Data">
-        <div class="poster-toolbar">
-          <div class="poster-brand">
-            <span class="poster-brand__icon material-symbols-rounded" aria-hidden="true">hub</span>
-            <span>Workspace</span>
-          </div>
-          <span class="runtime-pill"><i aria-hidden="true"></i> Equipo conectado</span>
-        </div>
-
-        <div class="poster-copy">
+      <div class="hero-image" aria-label="Espacio de trabajo con Protocol Data en una computadora">
+        <div class="hero-image__copy">
           <p class="eyebrow">Protocol Data · Acceso anticipado</p>
           <h1 id="hero-title">Delegá áreas clave de tu negocio sin perder el control.</h1>
-          <p>
+          <p class="hero-image__lead">
             Organizá logística, soporte, creativos, marketing y rendimiento web dentro de un mismo espacio de trabajo. Asigná responsabilidades y conservá contexto sobre cada decisión.
           </p>
+
           <div class="offer-row" aria-label="Beneficios de acceso anticipado">
             <span class="offer-badge"><span class="material-symbols-rounded" aria-hidden="true">redeem</span> 3 meses gratis</span>
             <span class="soft-badge">Lista de espera</span>
           </div>
         </div>
-
-        <div class="workspace-preview" aria-hidden="true">
-          <article class="workspace-card workspace-card--active">
-            <span class="workspace-card__icon material-symbols-rounded">local_shipping</span>
-            <div><strong>Logística</strong><span>Estados y responsables</span></div>
-            <span class="workspace-card__state">Asignado</span>
-          </article>
-          <article class="workspace-card">
-            <span class="workspace-card__icon material-symbols-rounded">forum</span>
-            <div><strong>Conversaciones</strong><span>Soporte con contexto</span></div>
-            <span class="workspace-card__count">12</span>
-          </article>
-          <article class="workspace-card">
-            <span class="workspace-card__icon material-symbols-rounded">movie_edit</span>
-            <div><strong>Creative Insights</strong><span>Entregas y revisiones</span></div>
-            <span class="workspace-card__count">4</span>
-          </article>
-          <article class="workspace-card">
-            <span class="workspace-card__icon material-symbols-rounded">monitoring</span>
-            <div><strong>Rendimiento web</strong><span>Versiones y fricción</span></div>
-            <span class="workspace-card__state workspace-card__state--green">Ahora</span>
-          </article>
-        </div>
       </div>
 
-      <aside class="contact-card" id="contacto" aria-labelledby="contact-title">
-        <div class="contact-card__icon material-symbols-rounded" aria-hidden="true">person_add</div>
-        <p class="eyebrow">Lista de espera</p>
-        <h2 id="contact-title">Solicitá acceso anticipado</h2>
-        <p class="contact-card__lead">Dejanos tus datos. Los primeros negocios seleccionados tendrán 3 meses gratis.</p>
+      <aside class="hero-cta" aria-label="Comenzar prueba gratis">
+        <p class="eyebrow">Acceso anticipado</p>
+        <h2>Probá Protocol Data durante 3 meses.</h2>
+        <p>Dejanos tus datos y un colaborador se comunicará contigo para conocer tu operación.</p>
 
-        <form class="waitlist-form" id="waitlist-form" novalidate>
-          <label class="field">
-            <span>Nombre</span>
-            <input type="text" name="name" autocomplete="name" placeholder="Tu nombre" required>
-          </label>
+        <button class="trial-link" type="button" data-open-waitlist>
+          <span>Comenzá tu prueba gratis</span>
+          <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+        </button>
 
-          <label class="field">
-            <span>Nombre del negocio</span>
-            <input type="text" name="business" autocomplete="organization" placeholder="Ej. Tienda Norte" required>
-          </label>
-
-          <label class="field">
-            <span>Capacidad de colaboradores</span>
-            <select name="team_size" required>
-              <option value="" selected disabled>Seleccioná una opción</option>
-              <option value="solo">Solo yo</option>
-              <option value="2-5">2 a 5 colaboradores</option>
-              <option value="6-10">6 a 10 colaboradores</option>
-              <option value="11-25">11 a 25 colaboradores</option>
-              <option value="26+">26 o más</option>
-            </select>
-          </label>
-
-          <label class="field">
-            <span>Dudas o consultas <small>Opcional</small></span>
-            <textarea name="message" rows="4" placeholder="Contanos brevemente qué te gustaría resolver."></textarea>
-          </label>
-
-          <button class="button button--primary form-submit" type="submit">
-            Contactar
-            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-          </button>
-
-          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-        </form>
+        <span class="hero-cta__note"><i aria-hidden="true"></i> Cupos de acceso progresivo</span>
       </aside>
     </section>
 
@@ -213,7 +153,7 @@
         </div>
         <div class="access-actions">
           <span class="three-months"><strong>3</strong><span>meses<br>gratis</span></span>
-          <a class="button button--primary" href="#contacto">Sumarme a la lista</a>
+          <button class="button button--primary" type="button" data-open-waitlist>Sumarme a la lista</button>
         </div>
       </div>
     </section>
@@ -229,6 +169,53 @@
       <span class="footer-status"><i aria-hidden="true"></i> Acceso anticipado</span>
     </div>
   </footer>
+
+  <dialog class="waitlist-dialog" id="waitlist-dialog" aria-labelledby="contact-title">
+    <div class="waitlist-modal">
+      <button class="modal-close material-symbols-rounded" type="button" data-close-waitlist aria-label="Cerrar formulario">close</button>
+
+      <div class="contact-card__icon material-symbols-rounded" aria-hidden="true">person_add</div>
+      <p class="eyebrow">Lista de espera</p>
+      <h2 id="contact-title">Solicitá acceso anticipado</h2>
+      <p class="contact-card__lead">Dejanos tus datos. Los primeros negocios seleccionados tendrán 3 meses gratis.</p>
+
+      <form class="waitlist-form" id="waitlist-form" novalidate>
+        <label class="field">
+          <span>Nombre</span>
+          <input type="text" name="name" autocomplete="name" placeholder="Tu nombre" required>
+        </label>
+
+        <label class="field">
+          <span>Nombre del negocio</span>
+          <input type="text" name="business" autocomplete="organization" placeholder="Ej. Tienda Norte" required>
+        </label>
+
+        <label class="field">
+          <span>Capacidad de colaboradores</span>
+          <select name="team_size" required>
+            <option value="" selected disabled>Seleccioná una opción</option>
+            <option value="solo">Solo yo</option>
+            <option value="2-5">2 a 5 colaboradores</option>
+            <option value="6-10">6 a 10 colaboradores</option>
+            <option value="11-25">11 a 25 colaboradores</option>
+            <option value="26+">26 o más</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Dudas o consultas <small>Opcional</small></span>
+          <textarea name="message" rows="4" placeholder="Contanos brevemente qué te gustaría resolver."></textarea>
+        </label>
+
+        <button class="button button--primary form-submit" type="submit">
+          Contactar
+          <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+        </button>
+
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </dialog>
 
   <script src="assets/js/main.js"></script>
 </body>
