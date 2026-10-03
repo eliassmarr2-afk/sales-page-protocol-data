@@ -1,60 +1,63 @@
 # Protocol Data — Sales Page
 
-Landing comercial informativa de Protocol Data.
+Landing comercial de acceso anticipado de Protocol Data.
 
-## Alcance
+## Alcance actual
 
-- Página de ventas / presentación comercial.
-- Sitio estático en esta etapa.
-- Sin Supabase.
-- Sin base de datos.
-- Sin autenticación.
-- Sin integraciones operativas.
-- Las integraciones de Protocol Data con cada negocio son manuales; no se debe presentar el producto como self-service.
+- Sitio estático.
+- Lista de espera visual con formulario local.
+- El formulario todavía no tiene backend ni persistencia.
+- Sin Supabase, autenticación ni integraciones operativas desde esta landing.
+- La activación de cada negocio continúa siendo acompañada/manual en esta etapa.
 
-## Aislamiento
+## Autoridad visual
 
-Este repositorio es independiente de todos los demás proyectos del ecosistema Protocol Data / Sazzú / Creative Insights / Zekere.
+La landing adopta el lenguaje visual de **Protocol Creative Insights**.
 
-**Regla:** no modificar otros repositorios para desarrollar esta landing.
+Tokens de referencia extraídos del frontend canónico de Creative Insights:
 
-## Contrato visual
+- Tipografía: Roboto.
+- Iconografía: Material Symbols Rounded.
+- Fondo: `#131314`.
+- Superficie: `#1f1f1f`.
+- Superficie elevada/hover: `#28292a` / `#303134`.
+- Borde: `#3c4043`.
+- Texto principal: `#e8eaed`.
+- Texto secundario: `#bdc1c6`.
+- Texto tenue: `#9aa0a6`.
+- Azul principal: `#8ab4f8`.
+- Azul de acción: `#0b57d0`.
+- CTA principal claro: `#a8c7fa` con texto `#062e6f`.
+- Verde de estado: `#81c995`.
+- Cards principales: radios de 24–28 px.
+- Inputs: radio de 12 px y borde `#5f6368`.
+- Pills: radio completo / 18–22 px.
+- Sin sombras decorativas en las superficies principales.
 
-La autoridad visual del proyecto es **ZEKERE UI STYLE SYSTEM V1** (snapshot canónico entregado el 2026-09-02).
+## Estructura de la landing
 
-Reglas no negociables de la implementación actual:
+1. Header comercial.
+2. Hero principal con promesa, visual de Workspace y oferta de 3 meses gratis.
+3. Formulario de lista de espera.
+4. Capacidades orientadas a delegación:
+   - Logística.
+   - Conversaciones / Soporte.
+   - Creative Insights.
+   - Segmentación post-compra.
+   - Rendimiento web.
+5. CTA final de acceso anticipado.
 
-- Google Sans Flex con pesos variables.
-- Canvas blanco.
-- Superficies pastel planas.
-- Sin sombras decorativas en cards.
-- Sin bordes decorativos de color.
-- Radios grandes, principalmente 30–36 px.
-- Whitespace amplio.
-- Títulos con tracking negativo y peso medio.
-- Iconografía SVG lineal con `currentColor`.
-- CTAs tipo pill, sin sombra ni gradiente.
-- Desktop-first para esta landing, manteniendo responsive mobile desde cada componente.
-- Respetar `prefers-reduced-motion` para animaciones.
+## Formulario
 
-## Estado actual
+Campos:
 
-### V0 — Hero / primer fold
+- nombre;
+- nombre del negocio;
+- capacidad de colaboradores;
+- dudas/consultas opcionales.
 
-Implementado:
+En esta versión, el submit se resuelve únicamente en frontend y muestra:
 
-- Header comercial.
-- Propuesta de valor inicial.
-- CTA de consulta visualmente preparado; canal real pendiente de definir.
-- CTA hacia capacidades.
-- Visualización conceptual animada de señales conectadas:
-  - publicidad / UTM;
-  - sitio web;
-  - contexto de cliente;
-  - operación / pedido.
-- Diseño responsive.
-- Animación progresiva con soporte de reducción de movimiento.
+`Un colaborador se comunicará contigo.`
 
-## Próximo movimiento
-
-Construir y pactar la primera sección real de capacidades usando documentación funcional auditada de Protocol Data, evitando afirmar capacidades no verificadas.
+No se persiste información hasta que se conecte un backend específico para la lista de espera.
