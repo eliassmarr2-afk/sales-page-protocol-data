@@ -1,20 +1,21 @@
 (() => {
   const overlay = document.querySelector('#waitlist-dialog');
-  const openButtons = Array.from(document.querySelectorAll('[data-open-waitlist]'));
-  const closeButton = document.querySelector('[data-close-waitlist]');
   const form = document.querySelector('#waitlist-form');
   const status = document.querySelector('#form-status');
   let lastFocusedElement = null;
 
-  const openModal = () => {
+  const openModal = (trigger) => {
     if (!overlay) return;
 
-    lastFocusedElement = document.activeElement;
+    lastFocusedElement = trigger instanceof HTMLElement ? trigger : document.activeElement;
     overlay.hidden = false;
+    overlay.removeAttribute('hidden');
+    overlay.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
 
-    window.requestAnimationFrame(() => {
-      overlay.querySelector('input, select, textarea, button')?.focus({ preventScroll: true });
+    requestAnimationFrame(() => {
+      const firstField = overlay.querySelector('input[name="name"]');
+      firstField?.focus({ preventScroll: true });
     });
   };
 
@@ -22,6 +23,8 @@
     if (!overlay) return;
 
     overlay.hidden = true;
+    overlay.setAttribute('hidden', '');
+    overlay.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('modal-open');
 
     if (lastFocusedElement instanceof HTMLElement) {
@@ -29,14 +32,28 @@
     }
   };
 
-  openButtons.forEach((button) => {
-    button.addEventListener('click', openModal);
-  });
+  // Delegated handling makes every current/future CTA reliable even if
+  // the DOM is changed without rebinding listeners.
+  document.addEventListener('click', (event) => {
+    const target = event.target instanceof Element ? event.target : null;
+    if (!target) return;
 
-  closeButton?.addEventListener('click', closeModal);
+    const opener = target.closest('[data-open-waitlist]');
+    if (opener) {
+      event.preventDefault();
+      openModal(opener);
+      return;
+    }
 
-  overlay?.addEventListener('click', (event) => {
-    if (event.target === overlay) closeModal();
+    if (target.closest('[data-close-waitlist]')) {
+      event.preventDefault();
+      closeModal();
+      return;
+    }
+
+    if (target === overlay) {
+      closeModal();
+    }
   });
 
   document.addEventListener('keydown', (event) => {
@@ -58,7 +75,6 @@
     }
 
     const button = form.querySelector('.form-submit');
-
     status.dataset.tone = 'success';
     status.textContent = 'Un colaborador se comunicará contigo.';
 
