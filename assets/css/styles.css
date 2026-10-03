@@ -1216,3 +1216,46 @@ html, body {
     width:auto;
   }
 }
+
+
+/* =========================================================
+   Hero V6 — approved proportions, single left content stack
+   ========================================================= */
+
+.hero-content{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+}
+
+.hero-copy{
+  width:min(520px,100%);
+}
+
+.hero-copy .hero-trial-cta{
+  margin-top:14px;
+  justify-self:auto;
+  align-self:auto;
+  width:auto;
+  min-width:0;
+  min-height:42px;
+  padding:0 16px;
+  display:inline-flex;
+  gap:7px;
+  border-radius:21px;
+  box-shadow:none;
+  white-space:nowrap;
+}
+
+@media(max-width:700px){
+  .hero-content{
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+  }
+
+  .hero-copy .hero-trial-cta{
+    width:auto;
+    align-self:flex-start;
+  }
+}
