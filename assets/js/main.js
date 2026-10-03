@@ -1,51 +1,26 @@
 (() => {
-  const map = document.querySelector('#context-map');
-  if (!map) return;
+  const form = document.querySelector('#waitlist-form');
+  const status = document.querySelector('#form-status');
 
-  const sources = Array.from(map.querySelectorAll('.source-card'));
-  const contextItems = Array.from(map.querySelectorAll('.context-list li'));
-  const livePill = document.querySelector('.live-pill');
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!form || !status) return;
 
-  const labels = [
-    'Publicidad conectada',
-    'Sitio conectado',
-    'Cliente conectado',
-    'Operación conectada'
-  ];
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-  const setActive = (index) => {
-    sources.forEach((source, sourceIndex) => {
-      const isActive = sourceIndex === index;
-      source.classList.toggle('is-active', isActive);
-      source.style.opacity = isActive ? '1' : '0.7';
-    });
-
-    contextItems.forEach((item, itemIndex) => {
-      const isActive = itemIndex === index;
-      item.classList.toggle('is-active', isActive);
-      item.style.opacity = isActive ? '1' : '0.56';
-    });
-
-    if (livePill) {
-      livePill.childNodes.forEach((node) => {
-        if (node.nodeType === Node.TEXT_NODE) node.remove();
-      });
-      livePill.append(` ${labels[index]}`);
+    if (!form.checkValidity()) {
+      status.dataset.tone = 'error';
+      status.textContent = 'Completá los campos obligatorios para continuar.';
+      form.reportValidity();
+      return;
     }
-  };
 
-  setActive(0);
+    const button = form.querySelector('.form-submit');
+    status.dataset.tone = 'success';
+    status.textContent = 'Un colaborador se comunicará contigo.';
 
-  if (reduceMotion) {
-    sources.forEach((source) => { source.style.opacity = '1'; });
-    contextItems.forEach((item) => { item.style.opacity = '1'; });
-    return;
-  }
-
-  let activeIndex = 0;
-  window.setInterval(() => {
-    activeIndex = (activeIndex + 1) % sources.length;
-    setActive(activeIndex);
-  }, 1800);
+    if (button) {
+      button.innerHTML = '<span class="material-symbols-rounded" aria-hidden="true">check_circle</span> Solicitud preparada';
+      button.disabled = true;
+    }
+  });
 })();
