@@ -1,42 +1,48 @@
 (() => {
-  const dialog = document.querySelector('#waitlist-dialog');
+  const overlay = document.querySelector('#waitlist-dialog');
   const openButtons = Array.from(document.querySelectorAll('[data-open-waitlist]'));
   const closeButton = document.querySelector('[data-close-waitlist]');
   const form = document.querySelector('#waitlist-form');
   const status = document.querySelector('#form-status');
+  let lastFocusedElement = null;
 
-  const openDialog = () => {
-    if (!dialog) return;
+  const openModal = () => {
+    if (!overlay) return;
 
-    if (typeof dialog.showModal === 'function') {
-      if (!dialog.open) dialog.showModal();
-    } else {
-      dialog.setAttribute('open', '');
-    }
+    lastFocusedElement = document.activeElement;
+    overlay.hidden = false;
+    document.body.classList.add('modal-open');
 
     window.requestAnimationFrame(() => {
-      dialog.querySelector('input, select, textarea, button')?.focus({ preventScroll: true });
+      overlay.querySelector('input, select, textarea, button')?.focus({ preventScroll: true });
     });
   };
 
-  const closeDialog = () => {
-    if (!dialog) return;
+  const closeModal = () => {
+    if (!overlay) return;
 
-    if (typeof dialog.close === 'function' && dialog.open) {
-      dialog.close();
-    } else {
-      dialog.removeAttribute('open');
+    overlay.hidden = true;
+    document.body.classList.remove('modal-open');
+
+    if (lastFocusedElement instanceof HTMLElement) {
+      lastFocusedElement.focus({ preventScroll: true });
     }
   };
 
   openButtons.forEach((button) => {
-    button.addEventListener('click', openDialog);
+    button.addEventListener('click', openModal);
   });
 
-  closeButton?.addEventListener('click', closeDialog);
+  closeButton?.addEventListener('click', closeModal);
 
-  dialog?.addEventListener('click', (event) => {
-    if (event.target === dialog) closeDialog();
+  overlay?.addEventListener('click', (event) => {
+    if (event.target === overlay) closeModal();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && overlay && !overlay.hidden) {
+      closeModal();
+    }
   });
 
   if (!form || !status) return;
