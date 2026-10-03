@@ -3,163 +3,232 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Protocol Data conecta señales de tu negocio para convertir datos aislados en contexto accionable.">
-  <title>Protocol Data — Datos con contexto</title>
+  <meta name="description" content="Protocol Data organiza áreas clave de tu negocio para que puedas delegar logística, soporte, creativos y rendimiento web sin perder el control.">
+  <meta name="theme-color" content="#131314">
+  <title>Protocol Data — Delegá sin perder el control</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0..1,0&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <header class="site-header" aria-label="Navegación principal">
+  <header class="site-header">
     <div class="site-header__inner">
       <a class="brand" href="#inicio" aria-label="Protocol Data, inicio">
-        <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <circle cx="7" cy="7" r="2.4"></circle>
-            <circle cx="17" cy="7" r="2.4"></circle>
-            <circle cx="12" cy="17" r="2.4"></circle>
-            <path d="M9.1 8.3 11 14.5M14.9 8.3 13 14.5M9.4 7h5.2"></path>
-          </svg>
-        </span>
-        <span class="brand__name">Protocol Data</span>
+        <span class="brand__icon material-symbols-rounded" aria-hidden="true">auto_awesome</span>
+        <span>Protocol Data</span>
       </a>
 
-      <nav class="desktop-nav" aria-label="Secciones">
+      <nav class="site-nav" aria-label="Navegación principal">
         <a href="#capacidades">Capacidades</a>
-        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#colaboradores">Colaboradores</a>
+        <a href="#acceso">Acceso anticipado</a>
       </nav>
 
-      <a class="header-cta" href="#contacto">
-        Hablar con Protocol Data
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M5 12h14M14 7l5 5-5 5"></path>
-        </svg>
-      </a>
+      <a class="topbar-cta" href="#contacto">Lista de espera</a>
     </div>
   </header>
 
   <main id="inicio">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__copy">
-        <p class="pink-hook">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M4 12h5l2.2-6 3.6 12L17 12h3"></path>
-          </svg>
-          DATOS QUE SE ENTIENDEN ENTRE SÍ
-        </p>
-
-        <h1 id="hero-title">Tus datos dejan de ser reportes. Empiezan a responder preguntas.</h1>
-
-        <p class="hero__lead">
-          Protocol Data organiza, cruza y contextualiza señales de tu sitio, campañas, clientes y operación para que puedas entender qué está pasando y actuar con criterio.
-        </p>
-
-        <div class="hero__actions" id="contacto">
-          <a class="cta cta--primary" href="#contacto" aria-label="Hablar con Protocol Data, canal de contacto pendiente de definir">
-            Hablar con Protocol Data
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M5 12h14M14 7l5 5-5 5"></path>
-            </svg>
-          </a>
-          <a class="cta cta--soft" href="#capacidades">
-            Explorar capacidades
-          </a>
+    <section class="hero page-shell" aria-labelledby="hero-title">
+      <div class="hero-poster" aria-label="Vista conceptual del espacio de trabajo de Protocol Data">
+        <div class="poster-toolbar">
+          <div class="poster-brand">
+            <span class="poster-brand__icon material-symbols-rounded" aria-hidden="true">hub</span>
+            <span>Workspace</span>
+          </div>
+          <span class="runtime-pill"><i aria-hidden="true"></i> Equipo conectado</span>
         </div>
 
-        <div class="signal-row" aria-label="Áreas de datos que Protocol Data puede relacionar">
-          <span>Sitio + publicidad</span>
-          <span>Usuarios + contexto</span>
-          <span>Operación + rendimiento</span>
+        <div class="poster-copy">
+          <p class="eyebrow">Protocol Data · Acceso anticipado</p>
+          <h1 id="hero-title">Delegá áreas clave de tu negocio sin perder el control.</h1>
+          <p>
+            Organizá logística, soporte, creativos, marketing y rendimiento web dentro de un mismo espacio de trabajo. Asigná responsabilidades y conservá contexto sobre cada decisión.
+          </p>
+          <div class="offer-row" aria-label="Beneficios de acceso anticipado">
+            <span class="offer-badge"><span class="material-symbols-rounded" aria-hidden="true">redeem</span> 3 meses gratis</span>
+            <span class="soft-badge">Lista de espera</span>
+          </div>
+        </div>
+
+        <div class="workspace-preview" aria-hidden="true">
+          <article class="workspace-card workspace-card--active">
+            <span class="workspace-card__icon material-symbols-rounded">local_shipping</span>
+            <div><strong>Logística</strong><span>Estados y responsables</span></div>
+            <span class="workspace-card__state">Asignado</span>
+          </article>
+          <article class="workspace-card">
+            <span class="workspace-card__icon material-symbols-rounded">forum</span>
+            <div><strong>Conversaciones</strong><span>Soporte con contexto</span></div>
+            <span class="workspace-card__count">12</span>
+          </article>
+          <article class="workspace-card">
+            <span class="workspace-card__icon material-symbols-rounded">movie_edit</span>
+            <div><strong>Creative Insights</strong><span>Entregas y revisiones</span></div>
+            <span class="workspace-card__count">4</span>
+          </article>
+          <article class="workspace-card">
+            <span class="workspace-card__icon material-symbols-rounded">monitoring</span>
+            <div><strong>Rendimiento web</strong><span>Versiones y fricción</span></div>
+            <span class="workspace-card__state workspace-card__state--green">Ahora</span>
+          </article>
         </div>
       </div>
 
-      <div class="hero-visual" aria-label="Ejemplo visual de datos conectados por Protocol Data">
-        <div class="hero-visual__topline">
-          <div>
-            <span class="eyebrow">EJEMPLO VISUAL</span>
-            <h2>Una persona. Varias señales. Un contexto.</h2>
-          </div>
-          <span class="live-pill"><i aria-hidden="true"></i> Conectado</span>
+      <aside class="contact-card" id="contacto" aria-labelledby="contact-title">
+        <div class="contact-card__icon material-symbols-rounded" aria-hidden="true">person_add</div>
+        <p class="eyebrow">Lista de espera</p>
+        <h2 id="contact-title">Solicitá acceso anticipado</h2>
+        <p class="contact-card__lead">Dejanos tus datos. Los primeros negocios seleccionados tendrán 3 meses gratis.</p>
+
+        <form class="waitlist-form" id="waitlist-form" novalidate>
+          <label class="field">
+            <span>Nombre</span>
+            <input type="text" name="name" autocomplete="name" placeholder="Tu nombre" required>
+          </label>
+
+          <label class="field">
+            <span>Nombre del negocio</span>
+            <input type="text" name="business" autocomplete="organization" placeholder="Ej. Tienda Norte" required>
+          </label>
+
+          <label class="field">
+            <span>Capacidad de colaboradores</span>
+            <select name="team_size" required>
+              <option value="" selected disabled>Seleccioná una opción</option>
+              <option value="solo">Solo yo</option>
+              <option value="2-5">2 a 5 colaboradores</option>
+              <option value="6-10">6 a 10 colaboradores</option>
+              <option value="11-25">11 a 25 colaboradores</option>
+              <option value="26+">26 o más</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Dudas o consultas <small>Opcional</small></span>
+            <textarea name="message" rows="4" placeholder="Contanos brevemente qué te gustaría resolver."></textarea>
+          </label>
+
+          <button class="button button--primary form-submit" type="submit">
+            Contactar
+            <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
+          </button>
+
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </aside>
+    </section>
+
+    <section class="capabilities page-shell" id="capacidades" aria-labelledby="capabilities-title">
+      <header class="section-heading">
+        <div>
+          <p class="eyebrow">Capacidades</p>
+          <h2 id="capabilities-title">Delegá áreas importantes de tu negocio dentro de la gestión.</h2>
+          <p>Asigná trabajo a las personas correctas sin perder contexto operativo ni concentrar toda la administración en una sola persona.</p>
         </div>
+        <span class="section-pill" id="colaboradores">Administrá vos o tus colaboradores</span>
+      </header>
 
-        <div class="context-map" id="context-map">
-          <div class="source-stack" aria-label="Fuentes de datos del ejemplo">
-            <article class="source-card source-card--pink" data-source="meta">
-              <span class="source-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M4 16.5c2.3-6.4 4.3-9.6 6-9.6 2.6 0 4.4 10.2 6.8 10.2 1.3 0 2.4-1.7 3.2-4.7"></path><path d="M4 16.5c.8 1.4 1.8 2.1 3 2.1 3 0 5-10.7 7.8-10.7 1.6 0 3.3 2.8 5.2 8.5"></path></svg>
-              </span>
-              <span><strong>Publicidad</strong><small>UTM · campaña</small></span>
-            </article>
-
-            <article class="source-card source-card--blue" data-source="web">
-              <span class="source-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8"></circle><path d="M4.5 9h15M4.5 15h15M12 4c2 2.2 3 4.9 3 8s-1 5.8-3 8c-2-2.2-3-4.9-3-8s1-5.8 3-8Z"></path></svg>
-              </span>
-              <span><strong>Sitio web</strong><small>visitas · eventos</small></span>
-            </article>
-
-            <article class="source-card source-card--aqua" data-source="chat">
-              <span class="source-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M5 5.5h14v10H9l-4 3v-13Z"></path><path d="M8 9h8M8 12h5"></path></svg>
-              </span>
-              <span><strong>Cliente</strong><small>consulta · historial</small></span>
-            </article>
-
-            <article class="source-card source-card--yellow" data-source="order">
-              <span class="source-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M5 7h14l-1 12H6L5 7Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg>
-              </span>
-              <span><strong>Operación</strong><small>pedido · estado</small></span>
-            </article>
+      <div class="capability-grid">
+        <article class="capability-card">
+          <div class="capability-card__top">
+            <span class="capability-icon material-symbols-rounded" aria-hidden="true">local_shipping</span>
+            <span class="capability-badge">Logística</span>
           </div>
+          <h3>Delegá cambios de estados logísticos</h3>
+          <p>
+            Autorizá a tus colaboradores para gestionar pedidos dentro del espacio de trabajo. Si un pedido pasa de <strong>Recibido</strong> a <strong>Despachado</strong>, un colaborador autorizado puede encargarse de esa gestión manteniendo el historial operativo.
+          </p>
+          <div class="micro-row"><span>Pedidos</span><span>Estados</span><span>Responsables</span></div>
+        </article>
 
-          <div class="map-core" aria-hidden="true">
-            <span class="map-core__ring map-core__ring--one"></span>
-            <span class="map-core__ring map-core__ring--two"></span>
-            <span class="map-core__node">
-              <svg viewBox="0 0 24 24" fill="none">
-                <circle cx="7" cy="7" r="2.4"></circle>
-                <circle cx="17" cy="7" r="2.4"></circle>
-                <circle cx="12" cy="17" r="2.4"></circle>
-                <path d="M9.1 8.3 11 14.5M14.9 8.3 13 14.5M9.4 7h5.2"></path>
-              </svg>
-            </span>
-            <span class="map-core__label">Protocol Data</span>
+        <article class="capability-card">
+          <div class="capability-card__top">
+            <span class="capability-icon material-symbols-rounded" aria-hidden="true">forum</span>
+            <span class="capability-badge capability-badge--violet">Soporte</span>
           </div>
+          <h3>Asigná conversaciones a tus colaboradores o a vos mismo</h3>
+          <p>
+            Trabajá sobre conversaciones contextuales: quién compró, desde dónde y en qué contexto. Los operadores autorizados pueden gestionar la atención y, cuando corresponda, emitir una notificación para recuperar la atención del cliente.
+          </p>
+          <div class="micro-row"><span>Conversaciones</span><span>Asignación</span><span>Contexto</span></div>
+        </article>
 
-          <div class="context-card">
-            <div class="context-card__header">
-              <span class="avatar" aria-hidden="true">LC</span>
-              <span><strong>Contexto conectado</strong><small>perfil de ejemplo</small></span>
+        <article class="capability-card">
+          <div class="capability-card__top">
+            <span class="capability-icon material-symbols-rounded" aria-hidden="true">movie_edit</span>
+            <span class="capability-badge">Creative Insights</span>
+          </div>
+          <h3>Dá acceso a colaboradores creativos y delegá videos publicitarios</h3>
+          <p>
+            Tus colaboradores creativos pueden consignar videos dentro de Protocol Creative Insights. Revisalos, solicitá cambios, rechazalos o adquirilos conservando registros visibles sobre cada entrega y decisión.
+          </p>
+          <div class="micro-row"><span>UGC</span><span>Revisiones</span><span>Adquisiciones</span></div>
+        </article>
+
+        <article class="capability-card">
+          <div class="capability-card__top">
+            <span class="capability-icon material-symbols-rounded" aria-hidden="true">interests</span>
+            <span class="capability-badge capability-badge--green">Post-compra</span>
+          </div>
+          <h3>Segmentá compradores en carpetas de intereses</h3>
+          <p>
+            Si hacés publicidad en Facebook o Instagram, agrupá compradores por estación del año, oferta, tipo de anuncio u otros segmentos relevantes para tu negocio. Volvé a trabajar con clientes que ya adquiriste y prepará ofertas más cercanas a lo que suelen responder mejor.
+          </p>
+          <div class="micro-row"><span>Audiencias</span><span>UTM</span><span>Recompra</span></div>
+        </article>
+
+        <article class="capability-card capability-card--wide">
+          <div class="capability-card__top">
+            <span class="capability-icon material-symbols-rounded" aria-hidden="true">monitoring</span>
+            <span class="capability-badge">Rendimiento web</span>
+          </div>
+          <div class="wide-card-layout">
+            <div>
+              <h3>Medí el rendimiento de tu web y hacé cambios en consecuencia</h3>
+              <p>
+                Observá cómo se comportan los usuarios y detectá puntos de fricción. Si una visita alcanza el 25% de scroll y permanece 20 segundos pero después abandona, ya tenés una señal concreta para investigar. Registrá una nueva versión, documentá el cambio y compará el comportamiento de la siguiente iteración.
+              </p>
+              <div class="micro-row"><span>Engagement</span><span>Versiones</span><span>Optimización</span></div>
             </div>
 
-            <ul class="context-list">
-              <li><i class="dot dot--pink"></i><span>Llegó desde <strong>Meta / campaña</strong></span></li>
-              <li><i class="dot dot--blue"></i><span>Interactuó con el <strong>sitio</strong></span></li>
-              <li><i class="dot dot--aqua"></i><span>Dejó una <strong>consulta</strong></span></li>
-              <li><i class="dot dot--yellow"></i><span>Terminó en una <strong>compra</strong></span></li>
-            </ul>
-
-            <div class="context-result">
-              <span>LECTURA</span>
-              <strong>La campaña ya no termina en un clic.</strong>
-              <p>Podés seguir la relación entre adquisición, comportamiento y resultado.</p>
+            <div class="funnel-preview" aria-label="Ejemplo de niveles de comportamiento web">
+              <div><span>L1</span><strong>10% · 10 s</strong><i style="--level:88%"></i></div>
+              <div><span>L2</span><strong>25% · 20 s</strong><i style="--level:61%"></i></div>
+              <div><span>L3</span><strong>50% · 30 s</strong><i style="--level:34%"></i></div>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section class="next-section" id="capacidades" aria-label="Próxima sección en construcción">
-      <p class="pink-hook">PRÓXIMO BLOQUE</p>
-      <h2>De mirar métricas a entender relaciones.</h2>
-      <p>Este será el punto de entrada a la banca de capacidades de Protocol Data. La construiremos con la documentación funcional real del producto.</p>
+    <section class="access page-shell" id="acceso" aria-labelledby="access-title">
+      <div class="access-card">
+        <div class="access-copy">
+          <p class="eyebrow">Acceso anticipado</p>
+          <h2 id="access-title">Entrá temprano. Probalo durante 3 meses.</h2>
+          <p>Estamos abriendo Protocol Data de forma progresiva. La lista de espera nos permite conocer tu operación y preparar el espacio de trabajo correcto antes de activar el servicio.</p>
+        </div>
+        <div class="access-actions">
+          <span class="three-months"><strong>3</strong><span>meses<br>gratis</span></span>
+          <a class="button button--primary" href="#contacto">Sumarme a la lista</a>
+        </div>
+      </div>
     </section>
-
-    <span id="como-funciona" aria-hidden="true"></span>
   </main>
+
+  <footer class="site-footer">
+    <div class="page-shell site-footer__inner">
+      <div class="brand brand--footer">
+        <span class="brand__icon material-symbols-rounded" aria-hidden="true">auto_awesome</span>
+        <span>Protocol Data</span>
+      </div>
+      <p>Espacios de trabajo para operaciones, contexto y colaboración.</p>
+      <span class="footer-status"><i aria-hidden="true"></i> Acceso anticipado</span>
+    </div>
+  </footer>
 
   <script src="assets/js/main.js"></script>
 </body>
