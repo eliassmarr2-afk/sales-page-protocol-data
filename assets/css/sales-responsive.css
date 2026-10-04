@@ -1,0 +1,324 @@
+/* Protocol Data sales page — responsive/mobile layer.
+   Desktop rules in styles.css remain authoritative. */
+
+.hero-media__picture{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  display:block;
+  width:100%;
+  height:100%;
+}
+
+.hero-media__picture .hero-media__image{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.mobile-hero-actions{
+  display:none;
+}
+
+.capability-more{
+  margin-top:18px;
+  margin-left:auto;
+  min-height:36px;
+  padding:0 2px 0 10px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:6px;
+  color:var(--ci-primary);
+  font-size:12px;
+  font-weight:500;
+  border-radius:18px;
+  transition:color .16s ease,background-color .16s ease;
+}
+
+.capability-more:hover{
+  color:#b9d1fb;
+  background:rgba(138,180,248,.08);
+}
+
+.capability-more .material-symbols-rounded{
+  font-size:17px!important;
+}
+
+.capability-card--wide > .capability-more{
+  align-self:flex-end;
+}
+
+/* Detail pages intentionally remain minimal until their copy is developed. */
+.capability-detail-page{
+  min-height:100svh;
+  background:var(--ci-bg);
+}
+
+.detail-shell{
+  width:min(calc(100% - 64px),960px);
+  margin:0 auto;
+  padding:34px 0 96px;
+}
+
+.detail-back{
+  min-height:40px;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  color:var(--ci-text-soft);
+  font-size:13px;
+  font-weight:500;
+  border-radius:20px;
+}
+
+.detail-back:hover{
+  color:var(--ci-text);
+}
+
+.detail-back .material-symbols-rounded{
+  font-size:18px!important;
+}
+
+.detail-hero{
+  margin-top:68px;
+  padding:34px;
+  border:1px solid var(--ci-border-soft);
+  border-radius:28px;
+  background:var(--ci-surface);
+}
+
+.detail-hero h1{
+  max-width:760px;
+  margin:0;
+  color:var(--ci-text);
+  font-size:clamp(34px,5vw,56px);
+  font-weight:400;
+  line-height:1.06;
+  letter-spacing:-.03em;
+}
+
+.detail-hero__lead{
+  max-width:680px;
+  margin:18px 0 0;
+  color:var(--ci-text-soft);
+  font-size:15px;
+  line-height:24px;
+}
+
+.detail-status{
+  margin-top:28px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--ci-text-muted);
+  font-size:11px;
+}
+
+.detail-status i{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--ci-primary);
+}
+
+@media(max-width:700px){
+  /* Header becomes lighter and mobile-specific. */
+  .site-header__inner{
+    width:calc(100% - 28px);
+    min-height:68px;
+    grid-template-columns:1fr auto;
+    gap:12px;
+  }
+
+  .site-nav{
+    display:none!important;
+  }
+
+  .brand{
+    font-size:16px;
+  }
+
+  .topbar-cta{
+    min-height:34px;
+    padding:0 11px;
+    font-size:11px;
+  }
+
+  /* Mobile gets the dedicated 9:16 artwork instead of cropping desktop. */
+  .hero-media{
+    height:calc(100svh - 68px)!important;
+    min-height:680px!important;
+    max-height:860px!important;
+  }
+
+  .hero-media__picture .hero-media__image{
+    object-position:center center!important;
+  }
+
+  .hero-media__shade{
+    background:
+      linear-gradient(180deg,
+        rgba(5,7,10,.91) 0%,
+        rgba(5,7,10,.76) 31%,
+        rgba(5,7,10,.26) 54%,
+        rgba(5,7,10,.12) 72%,
+        rgba(5,7,10,.46) 100%)!important;
+  }
+
+  .hero-content{
+    width:calc(100% - 32px)!important;
+    height:100%!important;
+    min-height:0!important;
+    padding:38px 0 30px!important;
+    display:flex!important;
+    align-items:flex-start!important;
+    justify-content:flex-start!important;
+  }
+
+  .hero-copy{
+    width:100%!important;
+    max-width:420px!important;
+  }
+
+  .hero-copy h1{
+    max-width:360px;
+    font-size:34px!important;
+    line-height:1.06!important;
+    letter-spacing:-.03em!important;
+  }
+
+  .hero-copy__lead{
+    max-width:350px!important;
+    margin-top:14px!important;
+    color:#d0d3d7!important;
+    font-size:13px!important;
+    line-height:20px!important;
+  }
+
+  .hero-copy .offer-row{
+    margin-top:18px!important;
+    gap:8px!important;
+    flex-direction:row!important;
+    align-items:center!important;
+  }
+
+  .offer-badge,.soft-badge{
+    min-height:34px!important;
+    padding:0 11px!important;
+    font-size:11px!important;
+  }
+
+  /* Preserve the approved desktop CTA; replace it only on mobile. */
+  .hero-copy > .hero-trial-cta{
+    display:none!important;
+  }
+
+  .mobile-hero-actions{
+    margin-top:14px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+  }
+
+  .mobile-hero-cta{
+    min-height:42px;
+    padding:0 15px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    border-radius:21px;
+    font-size:12px;
+    font-weight:500;
+    cursor:pointer;
+  }
+
+  .mobile-hero-cta--secondary{
+    border:1px solid rgba(232,234,237,.34);
+    background:rgba(19,19,20,.28);
+    color:var(--ci-text);
+    backdrop-filter:blur(8px);
+  }
+
+  .mobile-hero-cta--primary{
+    border:1px solid var(--ci-primary-cta);
+    background:var(--ci-primary-cta);
+    color:var(--ci-primary-ink);
+  }
+
+  .mobile-hero-cta .material-symbols-rounded{
+    font-size:17px!important;
+  }
+
+  .capabilities{
+    padding-top:60px!important;
+  }
+
+  .section-heading{
+    gap:18px!important;
+  }
+
+  .section-heading h2{
+    font-size:28px!important;
+    line-height:35px!important;
+  }
+
+  .capability-card{
+    min-height:0!important;
+    padding:22px!important;
+  }
+
+  .capability-card h3{
+    margin-top:24px!important;
+    font-size:20px!important;
+    line-height:27px!important;
+  }
+
+  .capability-card p{
+    font-size:13px!important;
+    line-height:21px!important;
+  }
+
+  .micro-row{
+    padding-top:20px!important;
+  }
+
+  .capability-more{
+    margin-top:14px;
+    padding-right:0;
+  }
+
+  .detail-shell{
+    width:calc(100% - 32px);
+    padding-top:22px;
+  }
+
+  .detail-hero{
+    margin-top:42px;
+    padding:24px;
+    border-radius:24px;
+  }
+
+  .detail-hero h1{
+    font-size:34px;
+  }
+
+  .detail-hero__lead{
+    font-size:14px;
+    line-height:22px;
+  }
+}
+
+@media(max-width:390px){
+  .hero-copy h1{
+    font-size:31px!important;
+  }
+
+  .hero-copy__lead{
+    max-width:325px!important;
+  }
+}
